@@ -1,0 +1,7 @@
+import snappy
+A=snappy.Manifold('/home/cris/SnapPy/16142_T425.tri')
+B=snappy.Manifold('/home/cris/SnapPy/16142_T435.tri')
+coversA=A.covers(5,method='gap')
+coversB=B.covers(5,method='gap')
+[X.homology() for X in coversA]
+[X.homology() for X in coversB]

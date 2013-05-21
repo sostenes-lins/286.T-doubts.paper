@@ -1,0 +1,13 @@
+import snappy
+A=snappy.Manifold('/home/cris/SnapPy/1519_T122.tri')
+B=snappy.Manifold('/home/cris/SnapPy/1519_T148.tri')
+C=snappy.Manifold('/home/cris/SnapPy/1519_T188.tri')
+D=snappy.Manifold('/home/cris/SnapPy/1519_T208.tri')
+coversA=A.covers(3,method='gap')
+coversB=B.covers(3,method='gap')
+coversC=C.covers(3,method='gap')
+coversD=D.covers(3,method='gap')
+[X.homology() for X in coversA]
+[X.homology() for X in coversB]
+[X.homology() for X in coversC]
+[X.homology() for X in coversD]
