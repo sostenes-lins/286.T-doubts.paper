@@ -1,8 +1,8 @@
 import snappy
-A=snappy.Manifold('/home/cris/SnapPy/16149_T437.tri')
-B=snappy.Manifold('/home/cris/SnapPy/16149_T449.tri')
-C=snappy.Manifold('/home/cris/SnapPy/16149_T464.tri')
-D=snappy.Manifold('/home/cris/SnapPy/16149_T537.tri')
+A=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/16149_T437.tri')
+B=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/16149_T449.tri')
+C=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/16149_T464.tri')
+D=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/16149_T537.tri')
 coversA=A.covers(6,method='gap')
 coversB=B.covers(6,method='gap')
 coversC=C.covers(6,method='gap')

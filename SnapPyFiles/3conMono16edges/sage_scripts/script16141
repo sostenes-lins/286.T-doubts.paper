@@ -1,6 +1,6 @@
 import snappy
-A=snappy.Manifold('/home/cris/SnapPy/16141_T424.tri')
-B=snappy.Manifold('/home/cris/SnapPy/16141_T468.tri')
+A=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/16141_T424.tri')
+B=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/16141_T468.tri')
 coversA=A.covers(5,method='gap')
 coversB=B.covers(5,method='gap')
 [X.homology() for X in coversA]

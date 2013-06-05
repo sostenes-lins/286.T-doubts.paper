@@ -1,0 +1,413 @@
+----------------------------------------------------------------------
+| Sage Version 5.9, Release Date: 2013-04-30                         |
+| Type "notebook()" for the browser-based notebook interface.        |
+| Type "help()" for help.                                            |
+----------------------------------------------------------------------
+sage: sage: sage: sage: sage: sage: ---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-6-4941e4f73009> in <module>()
+----> 1 coversA=A.covers(Integer(6),method='gap')
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/snappy-1.8.0-py2.7-linux-x86_64.egg/snappy/SnapPy.so in snappy.SnapPy.Manifold.covers (SnapPy.c:32026)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/snappy-1.8.0-py2.7-linux-x86_64.egg/snappy/SnapPy.so in snappy.SnapPy.Triangulation.covers (SnapPy.c:28926)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in __call__(self, *args, **kwds)
+    586 
+    587     def __call__(self, *args, **kwds):
+--> 588         return self._obj.parent().function_call(self._name, [self._obj] + list(args), kwds)
+    589     
+    590     def help(self):
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in function_call(self, function, args, kwds)
+    896         self.eval('__SAGE_LAST__ := %s;;'%marker)
+    897         res = self.eval("%s(%s)"%(function, ",".join([s.name() for s in args]+
+--> 898                   ['%s=%s'%(key,value.name()) for key, value in kwds.items()])))
+    899         if self.eval('last') != marker:
+    900             return self.new('last')
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in eval(self, x, newlines, strip, split_lines, **kwds)
+    568             if not input_line.endswith(';'):
+    569                 input_line += ';'
+--> 570         result = Expect.eval(self, input_line, **kwds)
+    571         if not newlines:
+    572             result = result.replace("\\\n","")
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/expect.pyc in eval(self, code, strip, synchronize, locals, allow_use_file, split_lines, **kwds)
+   1206                 elif split_lines:
+   1207                     return '\n'.join([self._eval_line(L, allow_use_file=allow_use_file, **kwds)
+-> 1208                                         for L in code.split('\n') if L != ''])
+   1209                 else:
+   1210                     return self._eval_line(code, allow_use_file=allow_use_file, **kwds)
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line(self, line, allow_use_file, wait_for_prompt, restart_if_needed)
+    734                 return self._eval_line_using_file(line)
+    735             (normal, error) = self._execute_line(line, wait_for_prompt=wait_for_prompt,
+--> 736                                                  expect_eof= (self._quit_string() in line))
+    737 
+    738             if len(error)> 0:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _execute_line(self, line, wait_for_prompt, expect_eof)
+    595             current_outputs = terminal_echo
+    596             while True:
+--> 597                 x = E.expect_list(self._compiled_full_pattern)
+    598                 current_outputs.append(E.before)
+    599                 #print "exec", x, current_outputs
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/pexpect.pyc in expect_list(self, pattern_list, timeout, searchwindowsize)
+    965                     raise TIMEOUT ('Timeout exceeded in expect_list().')
+    966                 # Still have time left, so read more data
+--> 967                 c = self.read_nonblocking (self.maxread, timeout)
+    968                 incoming = incoming + c
+    969                 if timeout is not None:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/pexpect.pyc in read_nonblocking(self, size, timeout)
+    546                 raise EOF ('End Of File (EOF) in read_nonblocking(). Pokey platform.')
+    547             
+--> 548         r, w, e = select.select([self.child_fd], [], [], timeout)
+    549         if not r:
+    550             if not self.isalive():
+
+error: (4, 'Interrupted system call')
+sage: ---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-7-fc4c481e576d> in <module>()
+----> 1 coversB=B.covers(Integer(6),method='gap')
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/snappy-1.8.0-py2.7-linux-x86_64.egg/snappy/SnapPy.so in snappy.SnapPy.Manifold.covers (SnapPy.c:32026)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/snappy-1.8.0-py2.7-linux-x86_64.egg/snappy/SnapPy.so in snappy.SnapPy.Triangulation.covers (SnapPy.c:28894)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in __call__(self, x, name)
+    199             return cls(self, x, name=name)
+    200         try:
+--> 201             return self._coerce_from_special_method(x)
+    202         except TypeError:
+    203             raise
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in _coerce_from_special_method(self, x)
+    225             s = '_gp_'
+    226         try:
+--> 227             return (x.__getattribute__(s))(self)
+    228         except AttributeError:
+    229             return self(x._interface_init_())
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/structure/sage_object.so in sage.structure.sage_object.SageObject._gap_ (sage/structure/sage_object.c:4659)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/structure/sage_object.so in sage.structure.sage_object.SageObject._interface_ (sage/structure/sage_object.c:4253)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in __call__(self, x, name)
+    197             
+    198         if isinstance(x, basestring):
+--> 199             return cls(self, x, name=name)
+    200         try:
+    201             return self._coerce_from_special_method(x)
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/expect.pyc in __init__(self, parent, value, is_name, name)
+   1289         else:
+   1290             try:
+-> 1291                 self._name = parent._create(value, name=name)
+   1292             # Convert ValueError and RuntimeError to TypeError for
+   1293             # coercion to work properly.
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in _create(self, value, name)
+    387     def _create(self, value, name=None):
+    388         name = self._next_var_name() if name is None else name
+--> 389         self.set(name, value)
+    390         return name
+    391 
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in set(self, var, value)
+   1312         """
+   1313         cmd = ('%s:=%s;;'%(var,value)).replace('\n','')
+-> 1314         out = self._eval_line(cmd, allow_use_file=True)
+   1315 
+   1316     def get(self, var, use_file=False):
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line(self, line, allow_use_file, wait_for_prompt, restart_if_needed)
+    732             #import pdb; pdb.set_trace()
+    733             if allow_use_file and wait_for_prompt and len(line) > self._eval_using_file_cutoff:
+--> 734                 return self._eval_line_using_file(line)
+    735             (normal, error) = self._execute_line(line, wait_for_prompt=wait_for_prompt,
+    736                                                  expect_eof= (self._quit_string() in line))
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line_using_file(self, line)
+   1368                 #    raise RuntimeError, msg
+   1369                 return ''
+-> 1370         return Expect._eval_line_using_file(self, line)
+   1371 
+   1372     def console(self):
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/expect.pyc in _eval_line_using_file(self, line, restart_if_needed)
+    691             tmp_to_use = self._remote_tmpfile()
+    692         try:
+--> 693             s = self._eval_line(self._read_in_file_command(tmp_to_use), allow_use_file=False, restart_if_needed=False)
+    694         except pexpect.EOF, msg:
+    695             if self._quit_string() in line:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line(self, line, allow_use_file, wait_for_prompt, restart_if_needed)
+    734                 return self._eval_line_using_file(line)
+    735             (normal, error) = self._execute_line(line, wait_for_prompt=wait_for_prompt,
+--> 736                                                  expect_eof= (self._quit_string() in line))
+    737 
+    738             if len(error)> 0:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _execute_line(self, line, wait_for_prompt, expect_eof)
+    595             current_outputs = terminal_echo
+    596             while True:
+--> 597                 x = E.expect_list(self._compiled_full_pattern)
+    598                 current_outputs.append(E.before)
+    599                 #print "exec", x, current_outputs
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/pexpect.pyc in expect_list(self, pattern_list, timeout, searchwindowsize)
+    965                     raise TIMEOUT ('Timeout exceeded in expect_list().')
+    966                 # Still have time left, so read more data
+--> 967                 c = self.read_nonblocking (self.maxread, timeout)
+    968                 incoming = incoming + c
+    969                 if timeout is not None:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/pexpect.pyc in read_nonblocking(self, size, timeout)
+    546                 raise EOF ('End Of File (EOF) in read_nonblocking(). Pokey platform.')
+    547             
+--> 548         r, w, e = select.select([self.child_fd], [], [], timeout)
+    549         if not r:
+    550             if not self.isalive():
+
+error: (4, 'Interrupted system call')
+sage: ---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-8-80a34b457c2a> in <module>()
+----> 1 coversC=C.covers(Integer(6),method='gap')
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/snappy-1.8.0-py2.7-linux-x86_64.egg/snappy/SnapPy.so in snappy.SnapPy.Manifold.covers (SnapPy.c:32026)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/snappy-1.8.0-py2.7-linux-x86_64.egg/snappy/SnapPy.so in snappy.SnapPy.Triangulation.covers (SnapPy.c:28894)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in __call__(self, x, name)
+    199             return cls(self, x, name=name)
+    200         try:
+--> 201             return self._coerce_from_special_method(x)
+    202         except TypeError:
+    203             raise
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in _coerce_from_special_method(self, x)
+    225             s = '_gp_'
+    226         try:
+--> 227             return (x.__getattribute__(s))(self)
+    228         except AttributeError:
+    229             return self(x._interface_init_())
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/structure/sage_object.so in sage.structure.sage_object.SageObject._gap_ (sage/structure/sage_object.c:4659)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/structure/sage_object.so in sage.structure.sage_object.SageObject._interface_ (sage/structure/sage_object.c:4253)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in __call__(self, x, name)
+    197             
+    198         if isinstance(x, basestring):
+--> 199             return cls(self, x, name=name)
+    200         try:
+    201             return self._coerce_from_special_method(x)
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/expect.pyc in __init__(self, parent, value, is_name, name)
+   1289         else:
+   1290             try:
+-> 1291                 self._name = parent._create(value, name=name)
+   1292             # Convert ValueError and RuntimeError to TypeError for
+   1293             # coercion to work properly.
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in _create(self, value, name)
+    387     def _create(self, value, name=None):
+    388         name = self._next_var_name() if name is None else name
+--> 389         self.set(name, value)
+    390         return name
+    391 
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in set(self, var, value)
+   1312         """
+   1313         cmd = ('%s:=%s;;'%(var,value)).replace('\n','')
+-> 1314         out = self._eval_line(cmd, allow_use_file=True)
+   1315 
+   1316     def get(self, var, use_file=False):
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line(self, line, allow_use_file, wait_for_prompt, restart_if_needed)
+    732             #import pdb; pdb.set_trace()
+    733             if allow_use_file and wait_for_prompt and len(line) > self._eval_using_file_cutoff:
+--> 734                 return self._eval_line_using_file(line)
+    735             (normal, error) = self._execute_line(line, wait_for_prompt=wait_for_prompt,
+    736                                                  expect_eof= (self._quit_string() in line))
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line_using_file(self, line)
+   1368                 #    raise RuntimeError, msg
+   1369                 return ''
+-> 1370         return Expect._eval_line_using_file(self, line)
+   1371 
+   1372     def console(self):
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/expect.pyc in _eval_line_using_file(self, line, restart_if_needed)
+    691             tmp_to_use = self._remote_tmpfile()
+    692         try:
+--> 693             s = self._eval_line(self._read_in_file_command(tmp_to_use), allow_use_file=False, restart_if_needed=False)
+    694         except pexpect.EOF, msg:
+    695             if self._quit_string() in line:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line(self, line, allow_use_file, wait_for_prompt, restart_if_needed)
+    734                 return self._eval_line_using_file(line)
+    735             (normal, error) = self._execute_line(line, wait_for_prompt=wait_for_prompt,
+--> 736                                                  expect_eof= (self._quit_string() in line))
+    737 
+    738             if len(error)> 0:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _execute_line(self, line, wait_for_prompt, expect_eof)
+    595             current_outputs = terminal_echo
+    596             while True:
+--> 597                 x = E.expect_list(self._compiled_full_pattern)
+    598                 current_outputs.append(E.before)
+    599                 #print "exec", x, current_outputs
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/pexpect.pyc in expect_list(self, pattern_list, timeout, searchwindowsize)
+    965                     raise TIMEOUT ('Timeout exceeded in expect_list().')
+    966                 # Still have time left, so read more data
+--> 967                 c = self.read_nonblocking (self.maxread, timeout)
+    968                 incoming = incoming + c
+    969                 if timeout is not None:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/pexpect.pyc in read_nonblocking(self, size, timeout)
+    546                 raise EOF ('End Of File (EOF) in read_nonblocking(). Pokey platform.')
+    547             
+--> 548         r, w, e = select.select([self.child_fd], [], [], timeout)
+    549         if not r:
+    550             if not self.isalive():
+
+error: (4, 'Interrupted system call')
+sage: ---------------------------------------------------------------------------
+error                                     Traceback (most recent call last)
+<ipython-input-9-6a5ade2fb56b> in <module>()
+----> 1 coversD=D.covers(Integer(6),method='gap')
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/snappy-1.8.0-py2.7-linux-x86_64.egg/snappy/SnapPy.so in snappy.SnapPy.Manifold.covers (SnapPy.c:32026)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/snappy-1.8.0-py2.7-linux-x86_64.egg/snappy/SnapPy.so in snappy.SnapPy.Triangulation.covers (SnapPy.c:28894)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in __call__(self, x, name)
+    199             return cls(self, x, name=name)
+    200         try:
+--> 201             return self._coerce_from_special_method(x)
+    202         except TypeError:
+    203             raise
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in _coerce_from_special_method(self, x)
+    225             s = '_gp_'
+    226         try:
+--> 227             return (x.__getattribute__(s))(self)
+    228         except AttributeError:
+    229             return self(x._interface_init_())
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/structure/sage_object.so in sage.structure.sage_object.SageObject._gap_ (sage/structure/sage_object.c:4659)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/structure/sage_object.so in sage.structure.sage_object.SageObject._interface_ (sage/structure/sage_object.c:4253)()
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in __call__(self, x, name)
+    197             
+    198         if isinstance(x, basestring):
+--> 199             return cls(self, x, name=name)
+    200         try:
+    201             return self._coerce_from_special_method(x)
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/expect.pyc in __init__(self, parent, value, is_name, name)
+   1289         else:
+   1290             try:
+-> 1291                 self._name = parent._create(value, name=name)
+   1292             # Convert ValueError and RuntimeError to TypeError for
+   1293             # coercion to work properly.
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/interface.pyc in _create(self, value, name)
+    387     def _create(self, value, name=None):
+    388         name = self._next_var_name() if name is None else name
+--> 389         self.set(name, value)
+    390         return name
+    391 
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in set(self, var, value)
+   1312         """
+   1313         cmd = ('%s:=%s;;'%(var,value)).replace('\n','')
+-> 1314         out = self._eval_line(cmd, allow_use_file=True)
+   1315 
+   1316     def get(self, var, use_file=False):
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line(self, line, allow_use_file, wait_for_prompt, restart_if_needed)
+    732             #import pdb; pdb.set_trace()
+    733             if allow_use_file and wait_for_prompt and len(line) > self._eval_using_file_cutoff:
+--> 734                 return self._eval_line_using_file(line)
+    735             (normal, error) = self._execute_line(line, wait_for_prompt=wait_for_prompt,
+    736                                                  expect_eof= (self._quit_string() in line))
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line_using_file(self, line)
+   1368                 #    raise RuntimeError, msg
+   1369                 return ''
+-> 1370         return Expect._eval_line_using_file(self, line)
+   1371 
+   1372     def console(self):
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/expect.pyc in _eval_line_using_file(self, line, restart_if_needed)
+    691             tmp_to_use = self._remote_tmpfile()
+    692         try:
+--> 693             s = self._eval_line(self._read_in_file_command(tmp_to_use), allow_use_file=False, restart_if_needed=False)
+    694         except pexpect.EOF, msg:
+    695             if self._quit_string() in line:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _eval_line(self, line, allow_use_file, wait_for_prompt, restart_if_needed)
+    734                 return self._eval_line_using_file(line)
+    735             (normal, error) = self._execute_line(line, wait_for_prompt=wait_for_prompt,
+--> 736                                                  expect_eof= (self._quit_string() in line))
+    737 
+    738             if len(error)> 0:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/sage/interfaces/gap.pyc in _execute_line(self, line, wait_for_prompt, expect_eof)
+    595             current_outputs = terminal_echo
+    596             while True:
+--> 597                 x = E.expect_list(self._compiled_full_pattern)
+    598                 current_outputs.append(E.before)
+    599                 #print "exec", x, current_outputs
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/pexpect.pyc in expect_list(self, pattern_list, timeout, searchwindowsize)
+    965                     raise TIMEOUT ('Timeout exceeded in expect_list().')
+    966                 # Still have time left, so read more data
+--> 967                 c = self.read_nonblocking (self.maxread, timeout)
+    968                 incoming = incoming + c
+    969                 if timeout is not None:
+
+/home/sostenes/sage-5.9/local/lib/python2.7/site-packages/pexpect.pyc in read_nonblocking(self, size, timeout)
+    546                 raise EOF ('End Of File (EOF) in read_nonblocking(). Pokey platform.')
+    547             
+--> 548         r, w, e = select.select([self.child_fd], [], [], timeout)
+    549         if not r:
+    550             if not self.isalive():
+
+error: (4, 'Interrupted system call')
+sage: ---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-10-97a18b6eb16b> in <module>()
+----> 1 [X.homology() for X in coversA]
+
+NameError: name 'coversA' is not defined
+sage: ---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-11-0afdb8b8461b> in <module>()
+----> 1 [X.homology() for X in coversB]
+
+NameError: name 'coversB' is not defined
+sage: ---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-12-0df7657090b0> in <module>()
+----> 1 [X.homology() for X in coversC]
+
+NameError: name 'coversC' is not defined
+sage: ---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-13-4f1a3b81867a> in <module>()
+----> 1 [X.homology() for X in coversD]
+
+NameError: name 'coversD' is not defined
+sage: 
+Exiting Sage (CPU time 0m16.49s, Wall time 44m55.64s).
+Exiting spawned Gap process.

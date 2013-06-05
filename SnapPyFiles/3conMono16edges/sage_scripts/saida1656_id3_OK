@@ -1,0 +1,12 @@
+----------------------------------------------------------------------
+| Sage Version 5.9, Release Date: 2013-04-30                         |
+| Type "notebook()" for the browser-based notebook interface.        |
+| Type "help()" for help.                                            |
+----------------------------------------------------------------------
+sage: sage: sage: sage: sage: sage: sage: sage: sage: sage: [Z/71 + Z, Z/7 + Z/7 + Z, Z, Z/37 + Z, Z/2 + Z/34 + Z]
+sage: [Z/7 + Z/7 + Z, Z/2 + Z/40 + Z, Z, Z/2 + Z/2 + Z/2 + Z/4 + Z, Z/2 + Z/32 + Z]
+sage: [Z, Z/37 + Z, Z/71 + Z, Z/2 + Z/34 + Z, Z/7 + Z/7 + Z]
+sage: [Z/2 + Z/40 + Z, Z, Z/2 + Z/32 + Z, Z/2 + Z/2 + Z/2 + Z/4 + Z, Z/7 + Z/7 + Z]
+sage: 
+Exiting Sage (CPU time 0m1.38s, Wall time 0m2.38s).
+Exiting spawned Gap process.

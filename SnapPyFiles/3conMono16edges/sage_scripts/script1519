@@ -1,12 +1,12 @@
 import snappy
-A=snappy.Manifold('/home/cris/SnapPy/1519_T122.tri')
-B=snappy.Manifold('/home/cris/SnapPy/1519_T148.tri')
-C=snappy.Manifold('/home/cris/SnapPy/1519_T188.tri')
-D=snappy.Manifold('/home/cris/SnapPy/1519_T208.tri')
-coversA=A.covers(3,method='gap')
-coversB=B.covers(3,method='gap')
-coversC=C.covers(3,method='gap')
-coversD=D.covers(3,method='gap')
+A=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1519_T122.tri')
+B=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1519_T148.tri')
+C=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1519_T188.tri')
+D=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1519_T208.tri')
+coversA=A.covers(6,method='gap')
+coversB=B.covers(6,method='gap')
+coversC=C.covers(6,method='gap')
+coversD=D.covers(6,method='gap')
 [X.homology() for X in coversA]
 [X.homology() for X in coversB]
 [X.homology() for X in coversC]

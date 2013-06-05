@@ -1,0 +1,13 @@
+import snappy
+A=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1516_T118.tri')
+B=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1516_T119.tri')
+C=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1516_T181.tri')
+D=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1516_T205.tri')
+coversA=A.covers(5,method='gap')
+coversB=B.covers(5,method='gap')
+coversC=C.covers(5,method='gap')
+coversD=D.covers(5,method='gap')
+[X.homology() for X in coversA]
+[X.homology() for X in coversB]
+[X.homology() for X in coversC]
+[X.homology() for X in coversD]
