@@ -3,5 +3,5 @@ A=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMon
 B=snappy.Manifold('/home/sostenes/Dropbox/286.T-doubts.paper/SnapPyFiles/3conMono16edges/1424_T79.tri')
 coversA=A.covers(5,method='gap')
 coversB=B.covers(5,method='gap')
-sorted[X.homology() for X in coversA]
-sorted[X.homology() for X in coversB]
+[X.homology() for X in coversA]
+[X.homology() for X in coversB]
