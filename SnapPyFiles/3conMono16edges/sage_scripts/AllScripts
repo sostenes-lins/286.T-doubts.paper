@@ -1,4 +1,4 @@
-
+#!/bin/sh
 sage < script1424 > saida1424_id5_ORD
 sage < script1516 > saida1516_id5_ORD
 sage < script1519 > saida1519_id6_ORD
