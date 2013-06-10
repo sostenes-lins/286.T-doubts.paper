@@ -1,0 +1,17 @@
+----------------------------------------------------------------------
+| Sage Version 5.9, Release Date: 2013-04-30                         |
+| Type "notebook()" for the browser-based notebook interface.        |
+| Type "help()" for help.                                            |
+----------------------------------------------------------------------
+sage: sage: sage: sage: sage: sage: sage: sage: sage: sage: [Z/229773, Z/1110327, Z/3018207, Z/3699687]
+sage: [Z/3 + Z/1299909, Z/126627, Z/1052067, Z/4117827]
+sage: [Z/229773, Z/1110327, Z/3018207, Z/3699687]
+sage: [Z/3 + Z/1299909, Z/126627, Z/1052067, Z/4117827]
+sage: volume
+sage: 28.375305555
+sage: 28.3753055549
+sage: 28.375305555
+sage: 28.3753055549
+sage: 
+Exiting Sage (CPU time 0m1.55s, Wall time 2m17.75s).
+Exiting spawned Gap process.
