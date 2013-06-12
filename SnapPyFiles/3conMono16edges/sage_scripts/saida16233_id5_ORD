@@ -1,0 +1,48 @@
+----------------------------------------------------------------------
+| Sage Version 5.9, Release Date: 2013-04-30                         |
+| Type "notebook()" for the browser-based notebook interface.        |
+| Type "help()" for help.                                            |
+----------------------------------------------------------------------
+sage: sage: sage: sage: sage: sage: [Z + Z,
+ Z + Z + Z + Z,
+ Z + Z + Z + Z,
+ Z + Z + Z + Z,
+ Z + Z + Z + Z,
+ Z + Z + Z + Z,
+ Z + Z + Z + Z,
+ Z + Z + Z + Z,
+ Z + Z + Z + Z + Z,
+ Z + Z + Z + Z + Z,
+ Z + Z + Z + Z + Z + Z,
+ Z + Z + Z + Z + Z + Z,
+ Z + Z + Z + Z + Z + Z,
+ Z + Z + Z + Z + Z + Z,
+ Z + Z + Z + Z + Z + Z,
+ Z + Z + Z + Z + Z + Z,
+ Z/2 + Z + Z + Z + Z,
+ Z/2 + Z + Z + Z + Z,
+ Z/2 + Z/2 + Z/4 + Z/12 + Z + Z + Z + Z,
+ Z/2 + Z/955878 + Z + Z,
+ Z/2 + Z/955878 + Z + Z,
+ Z/3 + Z + Z + Z + Z,
+ Z/3 + Z + Z + Z + Z,
+ Z/3 + Z + Z + Z + Z,
+ Z/3 + Z + Z + Z + Z,
+ Z/3 + Z + Z + Z + Z,
+ Z/3 + Z + Z + Z + Z,
+ Z/3 + Z + Z + Z + Z,
+ Z/3 + Z + Z + Z + Z,
+ Z/31 + Z/31 + Z + Z,
+ Z/881 + Z/881 + Z + Z,
+ Z/881 + Z/881 + Z + Z,
+ Z/1331 + Z/1331 + Z + Z,
+ Z/1331 + Z/1331 + Z + Z,
+ Z/5802825 + Z + Z,
+ Z/5802825 + Z + Z]
+sage: [Z/2 + Z/2 + Z/258 + Z/258, Z/171 + Z/171]
+sage: volume
+sage: 34.2256817492
+sage: 29.6246694067
+sage: 
+Exiting Sage (CPU time 0m3.22s, Wall time 0m56.60s).
+Exiting spawned Gap process.
