@@ -1,0 +1,80 @@
+\begin{thebibliography}{10}
+
+\bibitem{kauffman1991knots}
+L.~H. Kauffman.
+\newblock {\em Knots and Physics}, volume~1.
+\newblock World Scientific Publishing Company, 1991.
+
+\bibitem{kauffman1994tlr}
+L.~H. Kauffman and S.~L. Lins.
+\newblock {Temperley-Lieb Recoupling Theory and Invariants of 3-manifolds}.
+\newblock {\em Annals of Mathematical Studies, Princeton University Press},
+  134:1--296, 1994.
+
+\bibitem{kirby1978calculus}
+R.~Kirby.
+\newblock A calculus for framed links in ${S}^3$.
+\newblock {\em Inventiones Mathematicae}, 45(1):35--56, 1978.
+
+\bibitem{kirillov1993orbit}
+A.~A. Kirillov.
+\newblock The orbit method, i: Geometric quantization.
+\newblock {\em Contemporary Mathematics}, 145:1--1, 1993.
+
+\bibitem{lickorish1991three}
+W.~B.~R. Lickorish.
+\newblock Three-manifolds and the {T}emperley-{L}ieb algebra.
+\newblock {\em Mathematische Annalen}, 290(1):657--670, 1991.
+
+\bibitem{lins2007blink}
+L.~D. Lins.
+\newblock Blink: a language to view, recognize, classify and manipulate
+  3{D}-spaces.
+\newblock {\em \url{http://arxiv.org/arXiv:math/0702057}}, 2007.
+
+\bibitem{lins1982graph}
+S.~Lins.
+\newblock {Graph-Encoded Maps.}
+\newblock {\em J. Comb. Th., ser. B.}, 32(2):171--181, 1982.
+
+\bibitem{lins1995gca}
+S.~L. Lins.
+\newblock {\em {Gems, Computers, and Attractors for 3-Manifolds}}.
+\newblock World Scientific, 1995.
+
+\bibitem{lins2013B}
+S.~L. Lins.
+\newblock Closed oriented 3-manifolds are equivalence classes of plane graphs.
+\newblock {\em \url{http://arxiv.org/abs/1305.4540}}, 2013.
+
+\bibitem{lins2013}
+S.~L. Lins.
+\newblock A tougher challenge to 3-manifold topologists and group algebraists.
+\newblock {\em \url{http://arxiv.org/abs/1305.2617}}, 2013.
+
+\bibitem{reshetikhin1991invariants}
+N.~Reshetikhin and V.~G. Turaev.
+\newblock Invariants of 3-manifolds via link polynomials and quantum groups.
+\newblock {\em Inventiones mathematicae}, 103(1):547--597, 1991.
+
+\bibitem{turaev1992state}
+V.~G. Turaev and O.~Y. Viro.
+\newblock State sum invariants of 3-manifolds and quantum 6j-symbols.
+\newblock {\em Topology}, 31(4):865--902, 1992.
+
+\bibitem{turaev1994quantum}
+Vladimir~G Turaev.
+\newblock {\em Quantum Invariants of knots and three-manifolds}, volume~18.
+\newblock de Gruyter, 1994.
+
+\bibitem{welsh2010matroid}
+D.~J.~A. Welsh.
+\newblock {\em Matroid theory}.
+\newblock DoverPublications, 2010.
+
+\bibitem{witten1989quantum}
+E.~Witten.
+\newblock Quantum field theory and the {J}ones polynomial.
+\newblock {\em Communications in Mathematical Physics}, 121(3):351--399, 1989.
+
+\end{thebibliography}

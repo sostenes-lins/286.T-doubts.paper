@@ -1,0 +1,62 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: 3_Monochromatic3connecedBlinksAnd3Manifolds.aux
+The style file: plain.bst
+Database file #1: bibtexIndex.bib.bib
+I was expecting a `,' or a `}'---line 1315 of file bibtexIndex.bib.bib
+ : 
+ : @article{joli2012B,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 1609 of file bibtexIndex.bib.bib
+ : 
+ : @article{polyak2010minimal,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 6517 of file bibtexIndex.bib.bib
+ : 
+ : %160
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You've used 15 entries,
+            2118 wiz_defined-function locations,
+            589 strings with 5876 characters,
+and the built_in function-call counts, 3924 in all, are:
+= -- 395
+> -- 123
+< -- 2
++ -- 54
+- -- 36
+* -- 238
+:= -- 684
+add.period$ -- 45
+call.type$ -- 15
+change.case$ -- 59
+chr.to.int$ -- 0
+cite$ -- 15
+duplicate$ -- 166
+empty$ -- 346
+format.name$ -- 36
+if$ -- 803
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 19
+newline$ -- 78
+num.names$ -- 30
+pop$ -- 61
+preamble$ -- 1
+purify$ -- 48
+quote$ -- 0
+skip$ -- 105
+stack$ -- 0
+substring$ -- 254
+swap$ -- 17
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 52
+warning$ -- 0
+while$ -- 46
+width$ -- 17
+write$ -- 162
+(There were 3 error messages)

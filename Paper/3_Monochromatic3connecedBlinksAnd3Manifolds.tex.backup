@@ -853,10 +853,8 @@ Sage Execution Time (CPU time 0m1.68s, Wall time 1m5.63s).
 % \section{Appendix: SnapPy/GAP/Sage summarized sections}
 
 \section{Conclusion}
-With the exception of the four blinks $\{T[423],-(T[423])^\star,
-T[444],-(T[444])^\star\}$ in $16_{140}^t$, 
-we have proved that if $T_{16} \backepsilon B'\notin \{B,-B^\star\}$,
-then $B$ and $B'$ induce non-homeomorphic 3-manifolds. We do not know whether $T[423]$ and $T[444]$
+With the exception of $16_{140}^t$, we have noticed that if blink $B'\notin \{B,-B^\star\}$,
+then $B$ and $B'$ induce non-homeomorphic 3-manifolds. We do not know wheter $T[423]$ and $T[444]$
 induce homeomorphic 3-manifolds or not. Our bet, to make 3-connected monochromatic blinks
 conform to their induced 3-manifolds, is that they are non-homeomorphic. We leave this doubt as
 a focused remaining challenge to the 3-manifold community. In the realm of the 381 members of
@@ -866,7 +864,7 @@ presented in \url{http://arxiv.org/abs/1305.2617}, \cite{lins2013}. Maybe we hav
 technological limit with this example. 
 This strongly points to the research goal of finding 
 still better invariants of 3-manifolds. We hope that \url{http://arxiv.org/abs/1305.4540}, \cite{lins2013B}
-has something to say in this direction.   
+has something to say in this direction.
 
 \bibliographystyle{plain}
 %\bibliographystyle{is-alpha}
